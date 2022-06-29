@@ -22,6 +22,7 @@
   <ItemGroup>
     <PackageReference Include="ServiceStack" Version="6.*" />
     <PackageReference Include="ServiceStack.Client" Version="6.*" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL" Version="6.1.0" />
     <PackageReference Include="ServiceStack.OrmLite.Sqlite" Version="6.*" />
     <PackageReference Include="ServiceStack.Server" Version="6.*" />
     <PackageReference Include="ServiceStack.Text" Version="6.*" />

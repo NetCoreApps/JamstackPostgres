@@ -13,7 +13,7 @@ namespace JamstackPostgres
         public void Configure(IWebHostBuilder builder) => builder
             .ConfigureServices((context,services) => services.AddSingleton<IDbConnectionFactory>(new OrmLiteConnectionFactory(
                 context.Configuration.GetConnectionString("DefaultConnection") ?? ":memory:",
-                SqliteDialect.Provider)))
+                PostgreSqlDialect.Provider)))
             .ConfigureAppHost(appHost =>
             {
                 // Create non-existing Table and add Seed Data Example
