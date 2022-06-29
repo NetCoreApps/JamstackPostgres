@@ -166,6 +166,6 @@ jobs:
           port: 22
           envs: APPTOKEN,USERNAME
           script: |
-            echo $APPTOKEN | docker login ghcr.io -u $USERNAME --password-stdin
-            docker-compose -f ~/.deploy/${{ github.event.repository.name }}-docker-compose.yml pull
-            docker-compose -f ~/.deploy/${{ github.event.repository.name }}-docker-compose.yml up -d
+            echo $APPTOKEN | sudo docker login ghcr.io -u $USERNAME --password-stdin
+            sudo docker-compose -f ~/.deploy/${{ github.event.repository.name }}-docker-compose.yml pull
+            sudo docker-compose -f ~/.deploy/${{ github.event.repository.name }}-docker-compose.yml up -d
